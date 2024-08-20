@@ -23,13 +23,14 @@ LinearGradient backgroundLinearColor() {
 class AppColors {
   AppColors._();
   static const Color kPrimaryColor = Color(0xFF11212E);
-  static const Color kGreenColor = Color(0xff2E8B57);
+  static const Color kBlueColor = Color(0xff3572ea);
   static const Color kLightBlue = Color(0xFF6DA7FF);
   static const Color kSecondaryColor = Color(0xFF0B2C47);
   static const Color kBackgroundColor = Colors.white;
-  static const Color kFormLabelColor = kGreenColor;
+  static const Color kFormLabelColor = kBlueColor;
   static const Color kLight = Color(0xffffffff);
   static const Color kGreyDk = Color(0xff9091AD);
+  static const Color authGrey = Color(0xff6C7278);
   static const Color kAppBarColor = Color(0XFF0B2C47);
   static const Color kRewardBackgroundColor = Color(0xFF18122B);
   static const Color kButtonColor = Color(0xF1F1F1F1);

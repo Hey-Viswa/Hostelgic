@@ -6,7 +6,7 @@ import 'package:youtube_tutorial_hostel_management/theme/text_theme.dart';
 
 AppBar buildAppBar(BuildContext context, String? title) {
   return AppBar(
-    backgroundColor: AppColors.kGreenColor,
+    backgroundColor: AppColors.kBlueColor,
     elevation: 0,
     leading: IconButton(
       onPressed: () {
