@@ -6,6 +6,7 @@ import 'package:youtube_tutorial_hostel_management/common/spacing.dart';
 import 'package:youtube_tutorial_hostel_management/features/auth/screens/register_screen.dart';
 import 'package:youtube_tutorial_hostel_management/features/auth/widgets/custom_button.dart';
 import 'package:youtube_tutorial_hostel_management/features/auth/widgets/custom_text_field.dart';
+import 'package:youtube_tutorial_hostel_management/features/home/screens/Home_screen.dart';
 import 'package:youtube_tutorial_hostel_management/theme/colors.dart';
 import 'package:youtube_tutorial_hostel_management/theme/text_theme.dart';
 
@@ -188,9 +189,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           buttonColor: Colors.white,
                           press: () async {
                             if (_formKey.currentState!.validate()) {
-                              await apiCall.handleLogin(
-                                  context, email.text, password.text);
-                              print('validated');
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const HomeScreen(),
+                                ),
+                              );
                             }
                           },
                           size: 16,

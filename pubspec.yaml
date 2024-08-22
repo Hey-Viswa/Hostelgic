@@ -44,6 +44,7 @@ dependencies:
   syncfusion_flutter_charts: ^26.2.9
   animated_custom_dropdown: 3.1.1
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
