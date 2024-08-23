@@ -1,27 +1,25 @@
-<svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_29_238)">
-<rect x="7.5" y="4.5" width="65" height="65" rx="32.5" fill="#2E8B57" shape-rendering="crispEdges"/>
-<g clip-path="url(#clip0_29_238)">
-<path d="M46.25 44.825H31.25V29.55H40V27.05H31.25C29.875 27.05 28.75 28.175 28.75 29.55V44.55C28.75 45.925 29.875 47.05 31.25 47.05H46.25C47.625 47.05 48.75 45.925 48.75 44.55V35.8H46.25V44.825Z" fill="white"/>
-<path d="M48.75 23.3H46.25V27.05H42.5C42.5125 27.0625 42.5 29.55 42.5 29.55H46.25V33.2875C46.2625 33.3 48.75 33.2875 48.75 33.2875V29.55H52.5V27.05H48.75V23.3Z" fill="white"/>
-<path d="M43.75 32.05H33.75V34.55H43.75V32.05Z" fill="white"/>
-<path d="M33.75 35.8V38.3H43.75V35.8H40H33.75Z" fill="white"/>
-<path d="M43.75 39.55H33.75V42.05H43.75V39.55Z" fill="white"/>
-</g>
-</g>
-<defs>
-<filter id="filter0_d_29_238" x="0.5" y="0.5" width="81" height="81" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dx="1" dy="4"/>
-<feGaussianBlur stdDeviation="4"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.301961 0 0 0 0 0.631373 0 0 0 0 0.968627 0 0 0 0.3 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_29_238"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_29_238" result="shape"/>
-</filter>
-<clipPath id="clip0_29_238">
-<rect width="30" height="30" fill="white" transform="translate(25 22)"/>
-</clipPath>
-</defs>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg class="icon multi-color" fill="#000000" height="800px" id="create-note" viewBox="0 0 24 24"
+    width="800px" xmlns="http://www.w3.org/2000/svg">
+
+    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+    <g id="SVGRepo_iconCarrier">
+
+        <polygon style="fill: #3572ea; stroke-width: 2;" id="secondary-fill"
+            points="10.17 11 9 15 13 13.83 17.69 9.14 14.86 6.31 10.17 11" />
+
+        <path style="fill: none; stroke: #000000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"
+            d="M20,4a2.09,2.09,0,0,0-2.95.12L10.17,11,9,15l4-1.17L19.88,7A2.09,2.09,0,0,0,20,4Z"
+            id="primary-stroke" />
+
+        <path style="fill: none; stroke: #3572ea; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;" d="M12,3H4A1,1,0,0,0,3,4V20a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V12"
+            id="secondary-stroke" />
+
+    </g>
+
 </svg>
