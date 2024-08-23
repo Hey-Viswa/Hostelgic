@@ -1,14 +1,13 @@
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:youtube_tutorial_hostel_management/common/constants.dart';
-import 'package:youtube_tutorial_hostel_management/common/spacing.dart';
-import 'package:youtube_tutorial_hostel_management/theme/colors.dart';
-import 'package:youtube_tutorial_hostel_management/theme/text_theme.dart';
 
-import '../widgets/bar_chart.dart';
+import '../../../common/constants.dart';
+import '../../../common/spacing.dart';
+import '../../../theme/colors.dart';
+import '../../../theme/text_theme.dart';
 import '../widgets/category_card.dart';
+import '../widgets/pie_chart.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -223,30 +222,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
               heightSpacer(20),
-              CustomLineChart(
-                spots: const [
-                  FlSpot(0, 3),
-                  FlSpot(2.6, 2),
-                  FlSpot(4.9, 5),
-                  FlSpot(6.8, 3.1),
-                  FlSpot(8, 4),
-                  FlSpot(9.5, 3),
-                  FlSpot(11, 4),
-                ],
-                gradientColors: const [
-                  AppColors.contentColorCyan,
-                  AppColors.contentColorBlue,
-                ],
-                showAvg: showAvg,
-                avgSpots: const [
-                  FlSpot(0, 3.44),
-                  FlSpot(2.6, 3.44),
-                  FlSpot(4.9, 3.44),
-                  FlSpot(6.8, 3.44),
-                  FlSpot(8, 3.44),
-                  FlSpot(9.5, 3.44),
-                  FlSpot(11, 3.44),
-                ],
+              const Center(
+                child: PieChartSample1(),
               ),
             ],
           ),

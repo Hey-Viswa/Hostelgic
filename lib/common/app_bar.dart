@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:youtube_tutorial_hostel_management/theme/colors.dart';
-import 'package:youtube_tutorial_hostel_management/theme/text_theme.dart';
+
+import '../theme/colors.dart';
+import '../theme/text_theme.dart';
 
 AppBar buildAppBar(BuildContext context, String? title) {
   return AppBar(

@@ -1,13 +1,15 @@
 import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:youtube_tutorial_hostel_management/api_services/api_provider.dart';
-import 'package:youtube_tutorial_hostel_management/api_services/api_utils.dart';
-import 'package:youtube_tutorial_hostel_management/features/home/screens/Home_screen.dart';
-import 'package:youtube_tutorial_hostel_management/features/auth/screens/LoginScreen.dart';
-import 'package:youtube_tutorial_hostel_management/models/user_response.dart';
-import 'package:youtube_tutorial_hostel_management/theme/colors.dart';
+
+import '../features/auth/screens/LoginScreen.dart';
+import '../features/home/screens/Home_screen.dart';
+import '../models/user_response.dart';
+import '../theme/colors.dart';
+import 'api_provider.dart';
+import 'api_utils.dart';
 
 class ApiCall {
   Future<void> handleLogin(

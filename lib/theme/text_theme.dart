@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:youtube_tutorial_hostel_management/theme/colors.dart';
+
+import 'colors.dart';
 
 class AppTextTheme {
   static TextStyle kAppBarStyle = GoogleFonts.inter(

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:youtube_tutorial_hostel_management/api_services/api_calls.dart';
-import 'package:youtube_tutorial_hostel_management/common/constants.dart';
-import 'package:youtube_tutorial_hostel_management/common/spacing.dart';
-import 'package:youtube_tutorial_hostel_management/features/auth/screens/LoginScreen.dart';
-import 'package:youtube_tutorial_hostel_management/features/auth/widgets/custom_text_field.dart';
-import 'package:youtube_tutorial_hostel_management/features/home/screens/Home_screen.dart';
-import 'package:youtube_tutorial_hostel_management/theme/colors.dart';
-import 'package:youtube_tutorial_hostel_management/theme/text_theme.dart';
 
+import '../../../api_services/api_calls.dart';
+import '../../../common/constants.dart';
+import '../../../common/spacing.dart';
+import '../../../theme/colors.dart';
+import '../../../theme/text_theme.dart';
+import '../../home/screens/Home_screen.dart';
 import '../widgets/custom_button.dart';
+import '../widgets/custom_text_field.dart';
+import 'LoginScreen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});

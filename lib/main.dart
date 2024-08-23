@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:youtube_tutorial_hostel_management/features/auth/screens/LoginScreen.dart';
+
+import 'features/auth/screens/LoginScreen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
