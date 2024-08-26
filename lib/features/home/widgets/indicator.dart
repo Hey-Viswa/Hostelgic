@@ -8,13 +8,13 @@ class Indicator extends StatelessWidget {
   final Color textColor;
 
   const Indicator({
-    Key? key,
+    super.key,
     required this.color,
     required this.text,
     required this.isSquare,
     required this.size,
     required this.textColor,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

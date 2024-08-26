@@ -17,6 +17,7 @@ class ApiCall {
     String email,
     String password,
   ) async {
+    print("Inside handleLogin"); // Debugging line
     final apiProvider = Provider.of<ApiProvider>(context, listen: false);
     // final userProvider = Provider.of<UserProvider>(context, listen: false);
 
@@ -33,6 +34,9 @@ class ApiCall {
       body: requestData,
       includeBearerToken: false,
     );
+
+    print('Response status: ${response.statusCode}'); // Print status code
+    print('Response body: ${response.body}'); // Print response body
 
     if (response.statusCode == 200) {
       final Map<String, dynamic> responseBody = json.decode(response.body);
@@ -114,7 +118,7 @@ class ApiCall {
         ApiUtils.showSuccessSnackBar(context, responseBody['status']);
         // ignore: use_build_context_synchronously
         Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const LoginScreen()));
+            MaterialPageRoute(builder: (context) => const LoginBody()));
         // return responseBody['msg'];
       }
     }

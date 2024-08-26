@@ -21,7 +21,7 @@ AppBar buildAppBar(BuildContext context, String? title) {
     title: Text(
       title ?? "Registration",
       style: AppTextTheme.kLabelStyle.copyWith(
-          fontSize: 24.sp, fontWeight: FontWeight.bold, color: Colors.white),
+          fontSize: 24.sp, fontWeight: FontWeight.normal, color: Colors.white),
     ),
   );
 }

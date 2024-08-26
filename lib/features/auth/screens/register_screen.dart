@@ -125,7 +125,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                const LoginScreen(),
+                                                const LoginBody(),
                                           ),
                                         );
                                       },
@@ -261,6 +261,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                                 ),
                                               ),
                                               DropdownButton<String>(
+                                                underline: Container(),
                                                 value: selectedBlock,
                                                 onChanged: (String? newValue) {
                                                   setState(() {
@@ -303,8 +304,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                             shape: RoundedRectangleBorder(
                                               side: const BorderSide(
                                                   width: 1,
-                                                  color:
-                                                      const Color(0xffacb5bb)),
+                                                  color: Color(0xffacb5bb)),
                                               borderRadius:
                                                   BorderRadius.circular(14),
                                             ),
@@ -332,6 +332,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                                 ),
                                               ),
                                               DropdownButton<String>(
+                                                underline: Container(),
                                                 value: selectedRoom,
                                                 onChanged: (String? newValue) {
                                                   setState(() {
@@ -479,7 +480,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               heightSpacer(30),
                               CustomButton(
                                 buttonText: "Register",
-                                buttonColor: Colors.white,
+                                buttonColor: AppColors.kBlueColor,
                                 press: () async {
                                   if (_formKey.currentState!.validate()) {
                                     Navigator.push(

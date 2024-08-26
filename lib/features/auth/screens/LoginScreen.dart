@@ -1,24 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hostelgic/features/auth/screens/register_screen.dart';
+import 'package:hostelgic/features/auth/widgets/social_buttons.dart';
 
 import '../../../api_services/api_calls.dart';
 import '../../../common/constants.dart';
 import '../../../common/spacing.dart';
 import '../../../theme/colors.dart';
 import '../../../theme/text_theme.dart';
-import '../../home/screens/Home_screen.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_text_field.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      resizeToAvoidBottomInset: false,
+      backgroundColor: Colors.white,
+      body: LoginBody(),
+    );
+  }
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class LoginBody extends StatefulWidget {
+  const LoginBody({super.key});
+
+  @override
+  State<LoginBody> createState() => _LoginBodyState();
+}
+
+class _LoginBodyState extends State<LoginBody> {
   static final _formKey = GlobalKey<FormState>();
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
@@ -187,15 +200,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         heightSpacer(32),
                         CustomButton(
                           buttonText: "Login",
-                          buttonColor: Colors.white,
+                          buttonColor: AppColors.kBlueColor,
                           press: () async {
                             if (_formKey.currentState!.validate()) {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const HomeScreen(),
-                                ),
-                              );
+                              await apiCall.handleLogin(
+                                  context, email.text, password.text);
+                              print('validated');
                             }
                           },
                           size: 16,
@@ -233,7 +243,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Flexible(
-                              child: CustomSignInButton(
+                              child: SocialSignInButton(
                                 text: 'Google',
                                 assetName: 'assets/google.png',
                                 onPressed: () {},
@@ -243,7 +253,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             const SizedBox(width: 16),
                             Flexible(
-                              child: CustomSignInButton(
+                              child: SocialSignInButton(
                                 text: 'Facebook',
                                 assetName: 'assets/facebook.png',
                                 onPressed: () {},

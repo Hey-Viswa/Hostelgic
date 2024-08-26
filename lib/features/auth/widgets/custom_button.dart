@@ -9,13 +9,18 @@ class CustomButton extends StatelessWidget {
   final Color? buttonColor;
   final Function() press;
   final double? size;
+  final IconData? icon; // Adding an icon parameter
+  final bool rounded; // Adding a rounded parameter
 
-  const CustomButton(
-      {super.key,
-      required this.buttonText,
-      this.buttonColor,
-      required this.press,
-      required this.size});
+  const CustomButton({
+    super.key,
+    required this.buttonText,
+    this.buttonColor,
+    required this.press,
+    required this.size,
+    this.icon, // Initializing the icon parameter
+    this.rounded = false, // Default value for rounded is false
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,79 +30,29 @@ class CustomButton extends StatelessWidget {
         width: double.maxFinite,
         height: 50.h,
         decoration: BoxDecoration(
-          color: AppColors.kBlueColor,
-          borderRadius: BorderRadius.circular(14.r),
+          color: buttonColor ?? AppColors.kBlueColor,
+          borderRadius: BorderRadius.circular(
+              rounded ? 25.r : 14.r), // Adjusted based on rounded parameter
         ),
-        child: Center(
-          child: Text(
-            buttonText,
-            style: AppTextTheme.kLabelStyle.copyWith(
-              color: buttonColor ?? AppColors.kLight,
-              fontSize: size ?? 16,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (icon != null)
+              Icon(
+                icon,
+                color: buttonColor ?? AppColors.kLight,
+                size: 24.w,
+              ),
+            if (icon != null) SizedBox(width: 10.w),
+            Text(
+              buttonText,
+              style: AppTextTheme.kLabelStyle.copyWith(
+                color: const Color(0xffffffff),
+                fontSize: size ?? 16,
+              ),
             ),
-          ),
+          ],
         ),
-      ),
-    );
-  }
-}
-
-class CustomSignInButton extends StatelessWidget {
-  final String text;
-  final String assetName;
-  final VoidCallback onPressed;
-  final double borderRadius;
-  final double elevation;
-  final double padding;
-  final Color backgroundColor;
-  final Color textColor;
-  final BorderSide borderSide;
-
-  const CustomSignInButton({
-    required this.text,
-    required this.assetName,
-    required this.onPressed,
-    this.borderRadius = 10.0,
-    this.elevation = 0,
-    this.padding = 4.0,
-    this.backgroundColor = Colors.white,
-    this.textColor = Colors.black,
-    this.borderSide = const BorderSide(color: Colors.grey),
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return OutlinedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: backgroundColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(borderRadius),
-        ),
-        elevation: elevation,
-        side: borderSide,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Padding(
-            padding:
-                EdgeInsets.symmetric(vertical: padding, horizontal: padding),
-            child: Image.asset(
-              assetName,
-              height: 24,
-              width: 24,
-            ),
-          ),
-          Text(
-            text,
-            style: TextStyle(
-              color: textColor,
-              fontSize: 16,
-            ),
-          ),
-        ],
       ),
     );
   }

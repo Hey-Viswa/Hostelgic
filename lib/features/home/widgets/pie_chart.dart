@@ -107,7 +107,7 @@ class _PieChartSample1State extends State<PieChartSample1> {
 
         final color = [color0, color1, color2, color3][i];
         final title = ['One', 'Two', 'Three', 'Four'][i];
-        final titleColor =
+        const titleColor =
             AppColors.kBackgroundColor; // Ensure the text is visible
 
         return PieChartSectionData(
